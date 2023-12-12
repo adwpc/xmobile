@@ -9,7 +9,7 @@ Requirements
   - Go 1.17 or newer
   - Android SDK
   - Android NDK
-  - `golang.org/x/mobile/cmd/gomobile`
+  - `github.com/adwpc/xmobile/cmd/gomobile`
 
 The `gomobile` command respects the `ANDROID_HOME` and `ANDROID_NDK_HOME` environment variables.  If `gomobile` can't find your SDK and NDK, you can set these environment variables to specify their locations:
 ```
@@ -20,8 +20,8 @@ export ANDROID_NDK_HOME=/path/to/ndk-directory
 From this directory, run:
 
 ```sh
-  go install golang.org/x/mobile/cmd/gomobile@latest
-  go install golang.org/x/mobile/cmd/gobind@latest
+  go install github.com/adwpc/xmobile/cmd/gomobile@latest
+  go install github.com/adwpc/xmobile/cmd/gobind@latest
 
   # Make sure `gomobile` and `gobind` is in your `PATH`.
   gomobile bind -o app/ivy.aar robpike.io/ivy/mobile
@@ -29,10 +29,10 @@ From this directory, run:
 
 Open this directory from Android Studio, and build.
 
-`robpike.io/ivy` and `golang.org/x/mobile` are required dependencies of this main module. In order to update them:
+`robpike.io/ivy` and `github.com/adwpc/xmobile` are required dependencies of this main module. In order to update them:
 
 ```
-  go get -d golang.org/x/mobile@latest
+  go get -d github.com/adwpc/xmobile@latest
   go get -d robpike.io/ivy/mobile
   go mod tidy
 ```

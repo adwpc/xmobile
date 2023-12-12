@@ -1,9 +1,9 @@
-module golang.org/x/mobile/example/ivy
+module github.com/adwpc/xmobile/example/ivy
 
 go 1.17
 
 require (
-	golang.org/x/mobile v0.0.0-20210924032853-1c027f395ef7
+	github.com/adwpc/xmobile v0.0.0-20210924032853-1c027f395ef7
 	robpike.io/ivy v0.2.7
 )
 

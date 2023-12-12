@@ -16,8 +16,8 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/mobile/internal/importers/java"
-	"golang.org/x/mobile/internal/sdkpath"
+	"github.com/adwpc/xmobile/internal/importers/java"
+	"github.com/adwpc/xmobile/internal/sdkpath"
 )
 
 var gomobileBin string
@@ -41,10 +41,10 @@ func testMain(m *testing.M) int {
 		gocmd := filepath.Join(runtime.GOROOT(), "bin", "go")
 		gomobileBin = filepath.Join(binDir, "gomobile"+exe)
 		gobindBin := filepath.Join(binDir, "gobind"+exe)
-		if out, err := exec.Command(gocmd, "build", "-o", gomobileBin, "golang.org/x/mobile/cmd/gomobile").CombinedOutput(); err != nil {
+		if out, err := exec.Command(gocmd, "build", "-o", gomobileBin, "github.com/adwpc/xmobile/cmd/gomobile").CombinedOutput(); err != nil {
 			log.Fatalf("gomobile build failed: %v: %s", err, out)
 		}
-		if out, err := exec.Command(gocmd, "build", "-o", gobindBin, "golang.org/x/mobile/cmd/gobind").CombinedOutput(); err != nil {
+		if out, err := exec.Command(gocmd, "build", "-o", gobindBin, "github.com/adwpc/xmobile/cmd/gobind").CombinedOutput(); err != nil {
 			log.Fatalf("gobind build failed: %v: %s", err, out)
 		}
 		path := binDir
@@ -61,21 +61,21 @@ func TestClasses(t *testing.T) {
 		t.Skipf("java importer is not available")
 	}
 	runTest(t, []string{
-		"golang.org/x/mobile/bind/testdata/testpkg/javapkg",
+		"github.com/adwpc/xmobile/bind/testdata/testpkg/javapkg",
 	}, "", "ClassesTest")
 }
 
 func TestCustomPkg(t *testing.T) {
 	runTest(t, []string{
-		"golang.org/x/mobile/bind/testdata/testpkg",
+		"github.com/adwpc/xmobile/bind/testdata/testpkg",
 	}, "org.golang.custompkg", "CustomPkgTest")
 }
 
 func TestJavaSeqTest(t *testing.T) {
 	runTest(t, []string{
-		"golang.org/x/mobile/bind/testdata/testpkg",
-		"golang.org/x/mobile/bind/testdata/testpkg/secondpkg",
-		"golang.org/x/mobile/bind/testdata/testpkg/simplepkg",
+		"github.com/adwpc/xmobile/bind/testdata/testpkg",
+		"github.com/adwpc/xmobile/bind/testdata/testpkg/secondpkg",
+		"github.com/adwpc/xmobile/bind/testdata/testpkg/simplepkg",
 	}, "", "SeqTest")
 }
 
@@ -93,7 +93,7 @@ func TestJavaSeqBench(t *testing.T) {
 	if testing.Short() {
 		t.Skip("skipping benchmark in short mode.")
 	}
-	runTest(t, []string{"golang.org/x/mobile/bind/testdata/benchmark"}, "", "SeqBench")
+	runTest(t, []string{"github.com/adwpc/xmobile/bind/testdata/benchmark"}, "", "SeqBench")
 }
 
 // runTest runs the Android java test class specified with javaCls. If javaPkg is

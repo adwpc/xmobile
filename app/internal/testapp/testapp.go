@@ -11,13 +11,13 @@ import (
 	"log"
 	"net"
 
-	"golang.org/x/mobile/app"
-	"golang.org/x/mobile/app/internal/apptest"
-	"golang.org/x/mobile/event/lifecycle"
-	"golang.org/x/mobile/event/paint"
-	"golang.org/x/mobile/event/size"
-	"golang.org/x/mobile/event/touch"
-	"golang.org/x/mobile/gl"
+	"github.com/adwpc/xmobile/app"
+	"github.com/adwpc/xmobile/app/internal/apptest"
+	"github.com/adwpc/xmobile/event/lifecycle"
+	"github.com/adwpc/xmobile/event/paint"
+	"github.com/adwpc/xmobile/event/size"
+	"github.com/adwpc/xmobile/event/touch"
+	"github.com/adwpc/xmobile/gl"
 )
 
 func main() {

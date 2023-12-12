@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/mobile/internal/sdkpath"
+	"github.com/adwpc/xmobile/internal/sdkpath"
 )
 
 var (
@@ -80,7 +80,7 @@ func runInit(cmd *command) error {
 	}()
 
 	// Make sure gobind is up to date.
-	if err := goInstall([]string{"golang.org/x/mobile/cmd/gobind@latest"}, nil); err != nil {
+	if err := goInstall([]string{"github.com/adwpc/xmobile/cmd/gobind@latest"}, nil); err != nil {
 		return err
 	}
 

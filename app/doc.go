@@ -10,7 +10,7 @@ is to write a Go library and use `gomobile bind` to generate language
 bindings for Java and Objective-C. Building a library does not
 require the app package. The `gomobile bind` command produces output
 that you can include in an Android Studio or Xcode project. For more
-on language bindings, see https://golang.org/x/mobile/cmd/gobind.
+on language bindings, see https://github.com/adwpc/xmobile/cmd/gobind.
 
 The second way is to write an app entirely in Go. The APIs are limited
 to those that are portable between both Android and iOS, in particular
@@ -25,7 +25,7 @@ with `gomobile build`, which directly produces runnable output for
 Android and iOS.
 
 The gomobile tool can get installed with go get. For reference, see
-https://golang.org/x/mobile/cmd/gomobile.
+https://github.com/adwpc/xmobile/cmd/gomobile.
 
 For detailed instructions and documentation, see
 https://golang.org/wiki/Mobile.
@@ -47,9 +47,9 @@ goroutine as other code that calls OpenGL.
 	import (
 		"log"
 
-		"golang.org/x/mobile/app"
-		"golang.org/x/mobile/event/lifecycle"
-		"golang.org/x/mobile/event/paint"
+		"github.com/adwpc/xmobile/app"
+		"github.com/adwpc/xmobile/event/lifecycle"
+		"github.com/adwpc/xmobile/event/paint"
 	)
 
 	func main() {
@@ -69,11 +69,11 @@ goroutine as other code that calls OpenGL.
 An event is represented by the empty interface type interface{}. Any value can
 be an event. Commonly used types include Event types defined by the following
 packages:
-  - golang.org/x/mobile/event/lifecycle
-  - golang.org/x/mobile/event/mouse
-  - golang.org/x/mobile/event/paint
-  - golang.org/x/mobile/event/size
-  - golang.org/x/mobile/event/touch
+  - github.com/adwpc/xmobile/event/lifecycle
+  - github.com/adwpc/xmobile/event/mouse
+  - github.com/adwpc/xmobile/event/paint
+  - github.com/adwpc/xmobile/event/size
+  - github.com/adwpc/xmobile/event/touch
 
 For example, touch.Event is the type that represents touch events. Other
 packages may define their own events, and send them on an app's event channel.
@@ -85,4 +85,4 @@ response to lifecycle events. Such packages should call:
 
 in an init function inside that package.
 */
-package app // import "golang.org/x/mobile/app"
+package app // import "github.com/adwpc/xmobile/app"

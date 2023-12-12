@@ -1,4 +1,4 @@
-module golang.org/x/mobile
+module github.com/adwpc/xmobile
 
 go 1.18
 

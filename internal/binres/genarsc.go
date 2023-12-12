@@ -16,7 +16,7 @@ import (
 	"log"
 	"strconv"
 
-	"golang.org/x/mobile/internal/binres"
+	"github.com/adwpc/xmobile/internal/binres"
 )
 
 const tmpl = `// Copyright 2016 The Go Authors.  All rights reserved.

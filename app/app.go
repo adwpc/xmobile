@@ -7,10 +7,10 @@
 package app
 
 import (
-	"golang.org/x/mobile/event/lifecycle"
-	"golang.org/x/mobile/event/size"
-	"golang.org/x/mobile/gl"
-	_ "golang.org/x/mobile/internal/mobileinit"
+	"github.com/adwpc/xmobile/event/lifecycle"
+	"github.com/adwpc/xmobile/event/size"
+	"github.com/adwpc/xmobile/gl"
+	_ "github.com/adwpc/xmobile/internal/mobileinit"
 )
 
 // Main is called by the main.main function to run the mobile application.
@@ -30,7 +30,7 @@ type App interface {
 	//  - paint.Event
 	//  - size.Event
 	//  - touch.Event
-	// from the golang.org/x/mobile/event/etc packages. Other packages may
+	// from the github.com/adwpc/xmobile/event/etc packages. Other packages may
 	// define other event types that are carried on this channel.
 	Events() <-chan interface{}
 

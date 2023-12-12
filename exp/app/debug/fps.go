@@ -5,7 +5,7 @@
 //go:build darwin || linux || windows
 
 // Package debug provides GL-based debugging tools for apps.
-package debug // import "golang.org/x/mobile/exp/app/debug"
+package debug // import "github.com/adwpc/xmobile/exp/app/debug"
 
 import (
 	"image"
@@ -13,9 +13,9 @@ import (
 	"image/draw"
 	"time"
 
-	"golang.org/x/mobile/event/size"
-	"golang.org/x/mobile/exp/gl/glutil"
-	"golang.org/x/mobile/geom"
+	"github.com/adwpc/xmobile/event/size"
+	"github.com/adwpc/xmobile/exp/gl/glutil"
+	"github.com/adwpc/xmobile/geom"
 )
 
 // FPS draws a count of the frames rendered per second.
