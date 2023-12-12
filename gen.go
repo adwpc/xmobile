@@ -60,6 +60,7 @@ func replaceAll() {
 	replace("bind/java/SeqBench.java", "bind/java/SeqBench.java", prefix, []string{"package go;"})
 	replace("bind/genjava.go", "bind/genjava.go", prefix, []string{"return \"go\""})
 	replace("cmd/gobind/gen.go", "cmd/gobind/gen.go", prefix, []string{"\"java\", \"go\""})
+	replace("cmd/gomobile/bind_androidapp.go", "cmd/gomobile/bind_androidapp.go", prefix, []string{"\"go.\"", "go.**", "\"libgojni.so\""})
 }
 
 func main() {
