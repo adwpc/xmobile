@@ -42,7 +42,7 @@ func regexpReplace(str, prefix string) string {
 
 func random(length int) string {
 	rand.Seed(time.Now().UnixNano())
-	chars := []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+	chars := []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 	var b strings.Builder
 	for i := 0; i < length; i++ {
