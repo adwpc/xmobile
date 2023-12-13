@@ -80,9 +80,9 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 		closer()
 		// Generate support files along with the universe package
 		if p == nil {
-			dir, err := packageDir("golang.org/x/mobile/bind")
+			dir, err := packageDir("github.com/adwpc/xmobile/bind")
 			if err != nil {
-				errorf(`"golang.org/x/mobile/bind" is not found; run go get golang.org/x/mobile/bind: %v`, err)
+				errorf(`"github.com/adwpc/xmobile/bind" is not found; run go get github.com/adwpc/xmobile/bind: %v`, err)
 				return
 			}
 			repo := filepath.Clean(filepath.Join(dir, "..")) // golang.org/x/mobile directory.
@@ -105,7 +105,7 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 				errorf("unable to import bind/java: %v", err)
 				return
 			}
-			javaDir, err := packageDir("golang.org/x/mobile/bind/java")
+			javaDir, err := packageDir("github.com/adwpc/xmobile/bind/java")
 			if err != nil {
 				errorf("unable to import bind/java: %v", err)
 				return
@@ -127,7 +127,7 @@ func genPkg(lang string, p *types.Package, astFiles []*ast.File, allPkg []*types
 		genPkgH(w, "seq")
 		io.Copy(w, &buf)
 		closer()
-		dir, err := packageDir("golang.org/x/mobile/bind")
+		dir, err := packageDir("github.com/adwpc/xmobile/bind")
 		if err != nil {
 			errorf("unable to import bind: %v", err)
 			return
